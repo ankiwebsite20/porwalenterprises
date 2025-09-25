@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stats | Porwal Enterprises</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f4f4f4; }
+
+    /* Header */
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 50px; background:#001f3f; position:sticky; top:0; z-index:1000; }
+    header .logo { width:60px; margin-right:15px; }
+    header h1 { color:#fff; font-size:1.8rem; }
+    nav a { margin-left:20px; text-decoration:none; color:#fff; font-weight:500; transition:0.3s; }
+    nav a:hover, nav a.active { color:#ffcc00; }
+
+    /* Hero Banner */
+    .stats-hero { position:relative; height:40vh; background:url('images/stats-hero.jpg') center/cover no-repeat; display:flex; align-items:center; justify-content:center; }
+    .stats-hero .overlay { background: rgba(0,0,0,0.6); padding:30px 50px; border-radius:12px; text-align:center; color:#fff; animation: fadeIn 1.5s ease-in-out; }
+    .stats-hero h1 { font-size:3rem; margin-bottom:15px; }
+    .stats-hero p { font-size:1.2rem; }
+
+    /* Stats Section */
+    .stats-section { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; padding:80px 50px; gap:40px; }
+    .stat-card { background:#fff; width:250px; border-radius:15px; text-align:center; padding:40px 20px; box-shadow:0 10px 25px rgba(0,0,0,0.1); transition:0.3s; }
+    .stat-card:hover { transform:translateY(-8px); box-shadow:0 15px 30px rgba(0,0,0,0.2); }
+    .stat-card i { color:#001f3f; margin-bottom:15px; }
+    .stat-card h2 { font-size:2.5rem; color:#ffcc00; margin-bottom:10px; }
+    .stat-card p { font-size:1rem; color:#333; }
+
+    /* Footer */
+    footer { background:#001f3f; color:#fff; padding:40px 50px; text-align:center; }
+    footer .social-links { margin-top:15px; }
+    footer .social-links a { color:#fff; margin:0 10px; font-size:1.3rem; transition:0.3s; }
+    footer .social-links a:hover { color:#ffcc00; }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <img src="images/logo.png" alt="Porwal Enterprises" class="logo">
+      <h1>Porwal Enterprises</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="service.html">Services</a>
+      <a href="stats.html" class="active">Stats</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="stats-hero">
+    <div class="overlay">
+      <h1>Our Achievements</h1>
+      <p>Proven Success & Trusted by Hundreds of Clients</p>
+    </div>
+  </section>
+
+  <!-- Stats Cards -->
+  <section class="stats-section">
+    <div class="stat-card">
+      <i class="fa-solid fa-users fa-3x"></i>
+      <h2 class="counter" data-target="500">0</h2>
+      <p>Happy Clients</p>
+    </div>
+    <div class="stat-card">
+      <i class="fa-solid fa-briefcase fa-3x"></i>
+      <h2 class="counter" data-target="1000">0</h2>
+      <p>Successful Projects</p>
+    </div>
+    <div class="stat-card">
+      <i class="fa-solid fa-star fa-3x"></i>
+      <h2 class="counter" data-target="20">0</h2>
+      <p>Years of Experience</p>
+    </div>
+    <div class="stat-card">
+      <i class="fa-solid fa-headset fa-3x"></i>
+      <h2 class="counter" data-target="24">0</h2>
+      <p>Customer Support</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Porwal Enterprises. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/9315323997" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <!-- JS for animated counters -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const c = +counter.innerText;
+        const increment = target / 200;
+        if(c < target) {
+          counter.innerText = `${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 10);
+        } else {
+          counter.innerText = target;
+        }
+      }
+      updateCounter();
+    });
+  </script>
+
+</body>
+</html>

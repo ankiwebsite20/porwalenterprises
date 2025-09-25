@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Porwal Enterprises</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f4f4f4; }
+
+    /* Header */
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 50px; background:#001f3f; position:sticky; top:0; z-index:1000; }
+    header .logo { width:60px; margin-right:15px; }
+    header h1 { color:#fff; font-size:1.8rem; }
+    nav a { margin-left:20px; text-decoration:none; color:#fff; font-weight:500; transition:0.3s; }
+    nav a:hover, nav a.active { color:#ffcc00; }
+
+    /* Hero Section */
+    .about-hero { position:relative; height:80vh; background:url('images/au.png') center/cover no-repeat; display:flex; align-items:center; justify-content:center; }
+    .about-hero .overlay { background: rgba(0,0,0,0.6); padding:50px 70px; border-radius:12px; text-align:center; color:#fff; animation: fadeIn 1.5s ease-in-out; }
+    .about-hero h1 { font-size:3rem; margin-bottom:15px; }
+    .about-hero p { font-size:1.2rem; }
+
+    /* About Intro */
+    .about-intro { display:flex; flex-wrap:wrap; justify-content:space-between; padding:80px 50px; gap:40px; align-items:center; }
+    .about-intro img { flex:1; max-width:500px; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.15); transition:transform 0.3s ease; }
+    .about-intro img:hover { transform:scale(1.05); }
+    .about-intro .text { flex:1; min-width:300px; animation: slideInLeft 1s ease forwards; opacity:0; }
+    .about-intro h2 { font-size:2rem; color:#001f3f; margin-bottom:20px; }
+    .about-intro p { font-size:1.1rem; line-height:1.8; margin-bottom:20px; }
+    .about-intro ul { list-style:none; padding:0; }
+    .about-intro ul li { font-size:1.1rem; margin-bottom:12px; position:relative; padding-left:30px; }
+    .about-intro ul li:before { content:"✔"; color:#ffcc00; position:absolute; left:0; top:0; font-weight:bold; }
+
+    /* Mission & Vision */
+    .mission-vision { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; background:#e6f0ff; padding:60px 50px; }
+    .mv-card { flex:1; min-width:250px; background:#fff; padding:30px 20px; border-radius:15px; text-align:center; box-shadow:0 10px 20px rgba(0,0,0,0.1); transition:0.3s; }
+    .mv-card:hover { transform:translateY(-8px); }
+    .mv-card i { color:#001f3f; margin-bottom:15px; }
+    .mv-card h3 { margin-bottom:15px; font-size:1.3rem; }
+
+    /* Core Values */
+    .core-values { padding:60px 50px; }
+    .core-values h2 { text-align:center; font-size:2rem; color:#001f3f; margin-bottom:40px; }
+    .values-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:30px; }
+    .value-card { background:#fff; padding:30px 20px; border-radius:15px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.1); transition:0.3s; }
+    .value-card:hover { transform:translateY(-8px); }
+    .value-card i { color:#ffcc00; margin-bottom:15px; }
+    .value-card h4 { margin-bottom:15px; font-size:1.2rem; }
+
+    /* Why Choose Us */
+    .why-us { background:#e6f0ff; padding:60px 50px; }
+    .why-us h2 { text-align:center; font-size:2rem; color:#001f3f; margin-bottom:40px; }
+    .why-us ul { max-width:800px; margin:0 auto; padding:0; list-style:none; }
+    .why-us ul li { font-size:1.1rem; margin-bottom:15px; position:relative; padding-left:30px; }
+    .why-us ul li i { position:absolute; left:0; top:2px; color:#ffcc00; }
+
+    /* Footer */
+    footer { background:#001f3f; color:#fff; padding:40px 50px; text-align:center; }
+    footer .social-links { margin-top:15px; }
+    footer .social-links a { color:#fff; margin:0 10px; font-size:1.3rem; transition:0.3s; }
+    footer .social-links a:hover { color:#ffcc00; }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes slideInLeft { from { transform:translateX(-50px); opacity:0; } to { transform:translateX(0); opacity:1; } }
+
+    @media(max-width:900px) {
+      .about-intro { flex-direction:column; text-align:center; }
+      .about-intro img, .about-intro .text { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <img src="images/logo.png" alt="Porwal Enterprises" class="logo">
+      <h1>Porwal Enterprises</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="service.html">Services</a>
+      <a href="stats.html">Stats</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="about-hero">
+    <div class="overlay">
+      <h1>About Porwal Enterprises</h1>
+      <p>Building Trust. Delivering Excellence.</p>
+    </div>
+  </section>
+
+  <!-- About Intro -->
+  <section class="about-intro">
+    <img src="images/au.png" alt="About Us">
+    <div class="text">
+      <h2>Who We Are</h2>
+      <p>
+        <strong>Porwal Enterprises</strong> is a multi-service organization dedicated to simplifying business operations. 
+        From <b>transport and logistics</b> to <b>manpower solutions</b>, <b>financial consultancy</b>, and <b>website designing</b>, 
+        we are your trusted partner in growth.
+      </p>
+      <ul>
+        <li>Transport Services – Powered by Shiv Om Tempo for timely logistics</li>
+        <li>Manpower Solutions – Skilled and unskilled workforce</li>
+        <li>Accounting & Consultancy – GST, Bookkeeping, ITR, and financial guidance</li>
+        <li>Website Designing – Professional websites to enhance your online presence</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mission-vision">
+    <div class="mv-card">
+      <i class="fa-solid fa-bullseye fa-2x"></i>
+      <h3>Our Mission</h3>
+      <p>To provide businesses with cost-effective and high-quality services that improve efficiency, productivity, and profitability.</p>
+    </div>
+    <div class="mv-card">
+      <i class="fa-solid fa-lightbulb fa-2x"></i>
+      <h3>Our Vision</h3>
+      <p>To become a one-stop solution provider for businesses by integrating modern technology, skilled manpower, and strategic consultancy.</p>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="core-values">
+    <h2>Our Core Values</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <i class="fa-solid fa-handshake fa-2x"></i>
+        <h4>Trust</h4>
+        <p>We build long-term relationships based on honesty and transparency.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-bolt fa-2x"></i>
+        <h4>Efficiency</h4>
+        <p>Quick, reliable, and cost-effective solutions to keep your business running smoothly.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-people-group fa-2x"></i>
+        <h4>Teamwork</h4>
+        <p>We work hand-in-hand with our clients to achieve shared goals.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-star fa-2x"></i>
+        <h4>Excellence</h4>
+        <p>Delivering services with top quality and a client-first approach every time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li><i class="fa-solid fa-check"></i> 20+ years of combined industry experience</li>
+      <li><i class="fa-solid fa-check"></i> Trusted by 500+ clients nationwide</li>
+      <li><i class="fa-solid fa-check"></i> End-to-end business solutions under one roof</li>
+      <li><i class="fa-solid fa-check"></i> Customer support available 24/7</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Porwal Enterprises. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/9315323997" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

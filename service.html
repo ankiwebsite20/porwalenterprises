@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Porwal Enterprises</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f4f4f4; }
+
+    /* Header */
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 50px; background:#001f3f; position:sticky; top:0; z-index:1000; }
+    header .logo { width:60px; margin-right:15px; }
+    header h1 { color:#fff; font-size:1.8rem; }
+    nav a { margin-left:20px; text-decoration:none; color:#fff; font-weight:500; transition:0.3s; }
+    nav a:hover, nav a.active { color:#ffcc00; }
+
+    /* Hero Section */
+    .services-hero { position:relative; height:60vh; background:url('images/tr2.png') center/cover no-repeat; display:flex; align-items:center; justify-content:center; }
+    .services-hero .overlay { background: rgba(0,0,0,0.6); padding:40px 60px; border-radius:12px; text-align:center; color:#fff; animation: fadeIn 1.5s ease-in-out; }
+    .services-hero h1 { font-size:3rem; margin-bottom:15px; }
+    .services-hero p { font-size:1.2rem; }
+
+    /* Services Section */
+    .services-section { padding:80px 50px; }
+    .services-section h2 { text-align:center; font-size:2.2rem; color:#001f3f; margin-bottom:50px; }
+    .services-container { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:40px; }
+
+    .service-card { background:#fff; border-radius:15px; text-align:center; padding:30px 20px; box-shadow:0 10px 25px rgba(0,0,0,0.1); transition:0.3s; }
+    .service-card:hover { transform:translateY(-8px); box-shadow:0 15px 30px rgba(0,0,0,0.2); }
+    .service-card img { max-width:100%; border-radius:12px; margin-bottom:20px; transition:transform 0.3s ease; }
+    .service-card img:hover { transform:scale(1.05); }
+    .service-card h3 { font-size:1.3rem; margin-bottom:15px; color:#001f3f; }
+    .service-card p { font-size:1rem; line-height:1.6; }
+
+    /* Footer */
+    footer { background:#001f3f; color:#fff; padding:40px 50px; text-align:center; }
+    footer .social-links { margin-top:15px; }
+    footer .social-links a { color:#fff; margin:0 10px; font-size:1.3rem; transition:0.3s; }
+    footer .social-links a:hover { color:#ffcc00; }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <img src="images/logo.png" alt="Porwal Enterprises" class="logo">
+      <h1>Porwal Enterprises</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="service.html" class="active">Services</a>
+      <a href="stats.html">Stats</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="services-hero">
+    <div class="overlay">
+      <h1>Our Services</h1>
+      <p>Delivering Excellence Across Multiple Domains</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section">
+    <h2>What We Offer</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <img src="images/sot.jpeg" alt="Transport">
+        <h3>Shiv Om Tempo Services</h3>
+        <p>Timely and reliable transport solutions powered by Shiv Om Tempo for your business needs.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/mp2.png" alt="Manpower">
+        <h3>Manpower Solutions</h3>
+        <p>Providing skilled and unskilled workforce to ensure seamless operations for your business.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/ac.jpg" alt="Consultancy">
+        <h3>Accounting & Consultancy</h3>
+        <p>GST, Bookkeeping, ITR Filing and other financial consultancy services tailored for you.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/wb.jpg" alt="Website Designing">
+        <h3>Website Designing</h3>
+        <p>Professional and responsive websites to enhance your online presence and brand visibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Porwal Enterprises. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/9315323997" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
